@@ -22,3 +22,42 @@ try {
 }
 
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Usuarios</title>
+</head>
+<body>
+
+<h2>Tabla de Usuarios</h2>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Rol</th>
+        <th>Matrícula</th>
+    </tr>
+
+    <?php
+    foreach ($usuarios as $u) {
+        echo "<tr>";
+        echo "<td>" . $u->getNombre() . "</td>";
+        echo "<td>" . $u->getCorreo() . "</td>";
+        echo "<td>" . $u->getRol() . "</td>";
+
+        if ($u instanceof Alumno) {
+            echo "<td>" . $u->getMatricula() . "</td>";
+        } else {
+            echo "<td>-</td>";
+        }
+
+        echo "</tr>";
+    }
+    ?>
+
+</table>
+
+</body>
+</html>
