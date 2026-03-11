@@ -20,3 +20,4 @@ class Usuario{
         return $this->correo;
     }
 }
+?>
