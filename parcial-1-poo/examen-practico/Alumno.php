@@ -10,4 +10,14 @@ class Alumno extends Usuario {
         $this->matricula = $vmatricula;
     }
 
+    public function getMatricula() {
+        return $this->matricula;
+    }
+
+    public function getRol() {
+        return "Alumno";
+    }
+
 }
+
+?>
